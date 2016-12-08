@@ -49,6 +49,7 @@ class Shortener {
         if($code->num_rows) {
             return $code->fetch_object()->url;
         }
+        
         return '';
     }
 }
