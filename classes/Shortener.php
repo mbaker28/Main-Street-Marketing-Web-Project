@@ -1,7 +1,7 @@
 <?php
 
 class Shortener {
-    protected $db;
+    public $db;
     
     public function _construct() {
         //for demo purposes
