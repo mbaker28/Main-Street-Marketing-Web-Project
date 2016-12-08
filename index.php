@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>URL Shortener</title>
-        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div class="container">
