@@ -1,8 +1,14 @@
 <?php
+require_once 'classes/Shortener.php';
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+if(isset($_GET['code'])) {
+ $s = new Shortener;
+$code = $_GET['code'];
 
+if($url = $s->getUrl($code)) {
+    header("Location: {$url}");
+    die();
+}
+}
+
+header('Location: index.php');
