@@ -9,7 +9,7 @@ session_start();
         <title>URL Shortener</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body style="background-color: #ccccce;">
+    <body>
         <div class="container">
             <h1 class="title">Shorten a URL.</h1>
             
@@ -36,9 +36,9 @@ session_start();
             //If the 'links' table has data, each row of the table is outputted to the page
             if ($output->num_rows > 0) {
                 echo "";
-                echo "<tr><th>Original URL</th> <th>Short URL</th> <th>Clicks</th> <th>Created</th></tr>";
+                echo "<tr style=\"background-color: #ccccce;\"><th>Original URL</th> <th>Short URL</th> <th>Clicks</th> <th>Created</th></tr>";
                 while($row = $output->fetch_assoc()) {
-                    echo "<tr>" . "<td>" . "<a href=\"{$row["url"]}\">" . $row["url"] . "</a>" . "</td>" . "<td>" . "<a href=\"http://localhost:80/WebProject/{$row["code"]}\">" . "http://localhost:80/WebProject/{$row["code"]}" . "</a>" . "</td>" . "<td align=\"center\">" . $row["count"] . "</td>" . "<td>" . $row["created"] . "</td>" . "</tr>";
+                    echo "<tr style=\"background-color: #dddddd;\">" . "<td>" . "<a href=\"{$row["url"]}\">" . $row["url"] . "</a>" . "</td>" . "<td>" . "<a href=\"http://localhost:80/WebProject/{$row["code"]}\">" . "http://localhost:80/WebProject/{$row["code"]}" . "</a>" . "</td>" . "<td align=\"center\">" . $row["count"] . "</td>" . "<td>" . $row["created"] . "</td>" . "</tr>";
                     echo "<tr></tr>";
                 }
                 
