@@ -8,7 +8,6 @@ session_start();
         <meta charset="UTF-8">
         <title>URL Shortener</title>
         <link rel="stylesheet" href="css/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     </head>
     <body style="background-color: #ccccce;">
         <div class="container">
@@ -34,6 +33,7 @@ session_start();
             $s->db = new mysqli('localhost', 'matt', 'password', 'short_urls');
             $output = $s->db->query("SELECT url, code, count, created FROM links");
             
+            //If the 'links' table has data, each row of the table is outputted to the page
             if ($output->num_rows > 0) {
                 echo "";
                 echo "<tr><th>Original URL</th> <th>Short URL</th> <th>Clicks</th> <th>Created</th></tr>";
